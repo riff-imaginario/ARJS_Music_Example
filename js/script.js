@@ -50,7 +50,7 @@ AFRAME.registerComponent('my-event', {
 
       description.setAttribute('rotation', '-90 0 0');
       description.setAttribute('size', '1 2 1');
-      //description.setAttribute('position', '0 5 0');
+      description.setAttribute('position', '0 .5 0');
       description.setAttribute('material', 'color: orange');
       description.appendChild(descArea);
       
