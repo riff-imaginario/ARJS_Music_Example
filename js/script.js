@@ -15,6 +15,8 @@ AFRAME.registerComponent('my-event', {
       descBanda.setAttribute('class', 'descText');
       descBanda.setAttribute('text', 'width: 1');
       descCapa.setAttribute('src', '#capa');
+      descCapa.setAttribute('position', '.9 .35 0.001');
+      descCapa.setAttribute('scale', '.19 .18 1');
       descAlbum.setAttribute('value', `Album: ${album}`);
       descAlbum.setAttribute('class', 'descText');
       descAlbum.setAttribute('position', '0 .3 0');
@@ -24,7 +26,7 @@ AFRAME.registerComponent('my-event', {
       // Add Album, image and Banda to Panel
       descArea.setAttribute('id', 'descArea');
       descArea.setAttribute('text', 'width: 1');
-      descArea.setAttribute('position', '-.4 0 0');
+      descArea.setAttribute('position', '-.5 0 0');
       descArea.appendChild(descBanda);
       descArea.appendChild(descCapa);
       descArea.appendChild(descAlbum);
@@ -53,6 +55,7 @@ AFRAME.registerComponent('my-event', {
       //classDescText.setAttribute('text', 'width: 2');
 
       description.setAttribute('rotation', '-90 0 0');
+      description.setAttribute('width', '1.25');
       description.setAttribute('size', '1 2 1');
       description.setAttribute('position', '0 .5 0');
       description.setAttribute('material', 'color: #131313');
