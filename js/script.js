@@ -11,22 +11,22 @@ AFRAME.registerComponent('my-event', {
 
       // Drawing the description pane
       descBanda.setAttribute('value', `Banda: ${banda}`);
-      descBanda.setAttribute('position', '0 .4 0');
+      descBanda.setAttribute('position', '0 .4 0.005');
       descBanda.setAttribute('class', 'descText');
       descBanda.setAttribute('text', 'width: 1');
       descCapa.setAttribute('src', '#capa');
-      descCapa.setAttribute('position', '.9 .35 0.001');
+      descCapa.setAttribute('position', '.9 .35 0.005');
       descCapa.setAttribute('scale', '.19 .18 1');
       descAlbum.setAttribute('value', `Album: ${album}`);
       descAlbum.setAttribute('class', 'descText');
-      descAlbum.setAttribute('position', '0 .3 0');
+      descAlbum.setAttribute('position', '0 .3 0.005');
       descAlbum.setAttribute('text', 'width: 1');
       descAlbum.setAttribute('line', 'color: white; start: 0 -.07 .001; end: .68 -.07 .001');
       
       // Add Album, image and Banda to Panel
       descArea.setAttribute('id', 'descArea');
       descArea.setAttribute('text', 'width: 1');
-      descArea.setAttribute('position', '-.5 0 0');
+      descArea.setAttribute('position', '-.5 0 0.005');
       descArea.appendChild(descBanda);
       descArea.appendChild(descCapa);
       descArea.appendChild(descAlbum);
@@ -35,7 +35,7 @@ AFRAME.registerComponent('my-event', {
       let descMusicas = document.createElement('a-text');
       descMusicas.setAttribute('value', 'Musicas:');
       descMusicas.setAttribute('class', 'descText');
-      descMusicas.setAttribute('position', '0 .1 0');
+      descMusicas.setAttribute('position', '0 .1 0.001');
       descMusicas.setAttribute('text', 'width: 1');
       descArea.appendChild(descMusicas);
       
@@ -44,7 +44,7 @@ AFRAME.registerComponent('my-event', {
       for(let i=0; i < 8; i++){
         music = document.createElement('a-text');
         music.setAttribute('value', `Musica #${i}`);
-        music.setAttribute('position', `0 ${- i * .050} 0`);
+        music.setAttribute('position', `0 ${- i * .050} 0.005`);
         music.setAttribute('class', 'descText');
         music.setAttribute('text', 'width: 1');
         descArea.appendChild(music);
@@ -54,12 +54,13 @@ AFRAME.registerComponent('my-event', {
       //let classDescText = document.querySelector('.descText');
       //classDescText.setAttribute('text', 'width: 2');
 
+      description.appendChild(descArea);
       description.setAttribute('rotation', '-90 0 0');
       description.setAttribute('width', '1.25');
       description.setAttribute('size', '1 2 1');
-      description.setAttribute('position', '0 .5 0');
+      description.setAttribute('position', '0 0.5 0.001');
       description.setAttribute('material', 'color: #131313');
-      description.appendChild(descArea);
+      
       
     },
 
